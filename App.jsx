@@ -3,10 +3,19 @@ import { useState } from 'react';
 import './App.css';
 import PetFront from './main-pet';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AboutUs from './aboutUs';
+import Donate from './donate';
+import Categories from './categories';
 import Card from './petCards';
 import { breeds } from './petCards';
 import CatCard, { catBreeds } from './catCards';
 import DogCard, {dogBreeds} from './dogCards';
+import HomePage from './mainPage';
+
+
+
+
+
 
 function App() {
   return (
@@ -14,41 +23,19 @@ function App() {
     <div className='main-title'>
       <h1>Pet Shop</h1>
     </div>
+   
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<PetFront />} />
-    </Routes>
-   </BrowserRouter>
-
-   <h1 className="popular-breeds">Most Popular Breeds</h1>
-   <div className="pet-card-wrapper">
-  {breeds.map(breed => (
-    <Card key={breed.id} breed={breed} />
-  ))}
-
-    </div>
-    <div>
-      <h1>cats</h1>
-      <div className="pet-card-wrapper">
-  {catBreeds.map(catbreed => (
-    <CatCard key={catbreed.id} breed={catbreed} />
-  ))}
-
-    </div>
-    </div>
-
-<div className="dog-wrapper">
-<h1>dogs</h1>
-    <div className="pet-card-wrapper"> 
-    {dogBreeds.map(dogbreed => (
-    <DogCard key={dogbreed.id} breed={dogbreed} />
-  ))}
-    </div>
-</div>
+      <Routes>
+        <Route path="/" element={<PetFront />} />
+        <Route path="/categories" element={<Categories breeds={breeds} catBreeds={catBreeds} dogBreeds={dogBreeds} />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/donate" element={<Donate />} />
+      </Routes>
+    </BrowserRouter>
 </div>
   
 
-  );
+  );  
 }
 
 export default App;
