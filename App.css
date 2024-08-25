@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -41,7 +43,7 @@
   align-items: center;
   font-family: "Pacifico", cursive;
   font-weight:lighter;
-  color:rgb(100, 126, 56);
+  color:rgb(113, 124, 94);
 }
 
 .hrefs{
@@ -81,16 +83,18 @@
 
 .pet-card-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-}
+  justify-content: center;
+  align-content:center ;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height:max-content;
 
-.card-wrapper {
-  height:250px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.pet-card-each-wrapper{
+  display:flex;
+  justify-content: space-evenly;
+  margin:20px;
 }
 
 .pet-texts {
@@ -100,11 +104,6 @@
   color: rgb(201, 168, 125);
   font-weight: bolder;
 }
- .pictures{
-  height:200px;
-  width:200px;
-  border-radius:20px;
-} 
 
 .main-title{
   display:flex;
@@ -116,25 +115,197 @@
 .dog-wrapper{
   margin-top:50px;
 }
-
-
-
-
-
-
-
-/* .pet-card-wrapper{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  height:400px;
+.pictures {
+  height: 220px;
+  width: 250px;
+  border-radius: 20px;
+  object-fit: cover;
 }
-.card-wrapper{
-  height:200px;
-  width:250px;
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: flex-start;
+.card-wrapper {
+  position: relative;
+  height: 280px;
+  width: 250px;
+  border-radius: 20px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.3);
-} */ 
+  overflow: visible; /* allow the description card to overflow */
+}
+
+
+.pet-details {
+  position: absolute;
+  top: 0;
+  left: 70px; /* move it to the left initially, outside the main wrapper */
+  width: 250px;
+  height: 300px;
+  padding: 20px;
+  color:#6c606c;
+  background-color:#f5cdef;
+  border-radius: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out; /* transition effect */
+  opacity: 0; /* hide the description card initially */
+  pointer-events: none; /* disable pointer events initially */
+}
+.pet-details p{
+  font-size:larger;
+  font-weight:bold;
+  font-family:cursive;
+}
+
+.card-wrapper:hover .pet-details {
+  transform: translateX(200px); /* move it to the right on hover */
+  opacity: 1; /* show the description card on hover */
+  pointer-events: auto; /* enable pointer events on hover */
+}
+.cats-title,
+.dogs-title {
+  height:200px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter;
+  color:rgb(113, 124, 94);
+}
+
+.pet-card-each-wrapper:nth-child(even) .pet-details {
+  left: auto;
+  right: 0;
+}
+
+.pet-card-each-wrapper:nth-child(even) .card-wrapper:hover .pet-details {
+  transform: translateX(-93%);
+}
+.breed-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:plum;
+  font-family: "Macondo", cursive;
+  font-weight:bolder;
+  font-style: normal;
+}
+
+/* Add this to your CSS file or use a CSS-in-JS solution like styled components */
+
+/* Add this to your CSS file or use a CSS-in-JS solution like styled components */
+
+.donate-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color:#f7a9f8;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.donate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: bisque;
+}
+
+.donate-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.donate-txt-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donate-txt-btn p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: cursive;
+  color:rgb(124, 114, 125);
+}
+.donate-txt-btn h1{
+  color:rgb(99, 71, 125);
+}
+
+.donate-txt-btn button {
+  background-color:#f7a9f8;
+  color:#987b94;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight:bolder;
+}
+
+.donate-txt-btn button:active {
+  background-color:#e167e3;
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: bisque;
+}
+
+.about-us-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color:plum;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  color:bisque;
+}
+
+.about-us-content h1 {
+  color: bisque;
+  margin-bottom: 20px;
+}
+
+.about-us-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+.about-us-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.stat {
+  flex: 1;
+  margin: 20px;
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 36px;
+  color: rgb(124, 114, 125);
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 18px;
+  color: #666;
+}
