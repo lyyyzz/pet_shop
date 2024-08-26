@@ -11,6 +11,7 @@ import { breeds } from './petCards';
 import CatCard, { catBreeds } from './catCards';
 import DogCard, {dogBreeds} from './dogCards';
 import HomePage from './mainPage';
+import Footer from './footer';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
       </Routes>
     </BrowserRouter>
+    <Footer />
 </div>
   
 
