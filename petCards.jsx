@@ -35,7 +35,11 @@ const Card = ({ breed }) => {
           <p>Is Popular: {breed.isPopular ? 'Yes' : 'No'}</p>
           <p>Stock: {breed.stock}</p>
         </div>
-        <h2 className="breed-name">{breed.name}</h2>
+         <div className="cart-wishlist">
+          <button><span className="cart">&#x1F6D2;</span></button>
+          <h2 className="breed-name">{breed.name}</h2>
+          <button><span className="heart">&#x1F493;</span></button>
+          </div>
       </div>
     );
   };
