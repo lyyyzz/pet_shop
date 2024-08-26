@@ -105,7 +105,8 @@
   font-weight: bolder;
 }
 
-.main-title{
+.main-title,
+.welcome{
   display:flex;
   justify-content: center;
   align-items: center;
@@ -186,9 +187,6 @@
   font-style: normal;
 }
 
-/* Add this to your CSS file or use a CSS-in-JS solution like styled components */
-
-/* Add this to your CSS file or use a CSS-in-JS solution like styled components */
 
 .donate-container {
   max-width: 800px;
@@ -309,7 +307,188 @@
   font-size: 18px;
   color: #666;
 }
+.welcome{
+  margin-bottom:100px;
+}
+.browse h1,h2{
+  font-family: "Nerko One", cursive;
+  color:#e572e7;
+  margin-bottom: 50px;
+}
+.browse h2{
+  width:450px;
+  font-weight:lighter;
+ 
+}
+.browse-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact-us{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:100px;
+  margin-bottom:140px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 90px;
+}
+.happy{
+  border-radius: 50px;
+  height:400px;
+  width:500px;
+}
 
+.footer {
+  background-color: bisque;
+  padding: 30px 0;
+  color: #666; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-evenly; 
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.3);
 
+}
 
+.footer > .container {
+  display: flex; 
+  flex-wrap: wrap;
+  gap:70px; 
+}
+
+.footer-section {
+  margin: 0 20px; 
+  gap:20px;
+}
+.footer-section li{
+  font-size:20px;
+  color:#ed93ef;
+  font-weight:bolder;
+  font-family:cursive;
+}
+
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size:30px;
+  display: flex;
+  justify-content: center;
+  color:#e885ea;
+  font-family: "Nerko One", cursive;
+}
+
+.footer-link {
+  color: #666; 
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #333; 
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li {
+  margin-bottom: 10px;
+}
+
+.social-links i {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #666;
+}
+
+.social-links i:hover {
+  color: #333; 
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #999; 
+  margin-top: 20px;
+  text-align: center; 
+}
+.browse-pets{
+  color:#e885ea;
+  font-family: "Nerko One", cursive;
+  margin-bottom:100px;
+}
+
+.cart-wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart,
+.breed-name,
+.heart {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cart {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.breed-name {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.heart {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.cart-wishlist button {
+  background-color: rgb(254, 233, 208);
+  border: 1px solid rgb(220, 208, 208);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width:40px;
+}
+
+.cart-wishlist button:hover {
+  background-color: rgb(245, 223, 193);
+}
+
+.cart-wishlist button:active {
+  background-color: rgb(235, 213, 178);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cart-wishlist button .cart {
+  font-size: 18px;
+  margin-right: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  margin-left: 2px;
+}
+
+.cart-wishlist button .heart {
+  font-size: 18px;
+  margin-left: 2px;
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  margin-right:8px;
+}
 
